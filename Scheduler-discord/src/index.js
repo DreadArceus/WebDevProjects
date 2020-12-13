@@ -12,7 +12,7 @@ client.on("message", (msg) => {
   }
   const args = msg.content.slice(info.prefix.length).split(" ");
   const cmd = args.shift().toLowerCase();
-  msg.channel.send(`Your command: ${cmd}\nYour arguments: ${args}`);
+  
 });
 
 client.login(info.token);
