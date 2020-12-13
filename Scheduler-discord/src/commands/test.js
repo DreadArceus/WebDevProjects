@@ -10,6 +10,6 @@ const execute = async function (msg, args) {
 module.exports = {
   name: "test",
   description: "test command",
-  usage: "!test [args]",
+  usage: "test [args]",
   execute,
 };

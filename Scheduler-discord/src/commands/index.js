@@ -15,7 +15,7 @@ const execute = async function (msg, args) {
 const help = {
   name: "help",
   description: "Command used to get help about all bot commands",
-  usage: "!help [command-name]",
+  usage: "help [command-name]",
   execute,
 };
 
