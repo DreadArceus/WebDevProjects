@@ -10,10 +10,8 @@ client.on("message", (msg) => {
   if (!msg.content.startsWith(info.prefix) || msg.author.bot) {
     return;
   }
-  const temp = msg.content.slice(info.prefix.length).split(" ");
-  const cmd = temp[0];
-  const args = temp.slice(1);
-  delete temp;
+  const args = msg.content.slice(info.prefix.length).split(" ");
+  const cmd = args.shift().toLowerCase();
   msg.channel.send(`Your command: ${cmd}\nYour arguments: ${args}`);
 });
 
