@@ -1,0 +1,16 @@
+{
+  "name": "scheduler-discord",
+  "version": "1.0.0",
+  "description": "Discord bot for managing deadlines",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "DreadArceus",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "nodemon": "^2.0.6"
+  }
+}
