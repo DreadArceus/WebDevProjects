@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const test = require("./test.js");
 const add = require("./add.js");
+const show = require("./show.js");
 
 const execute = async function (msg, args) {
   if (!args.length) {
@@ -24,6 +25,7 @@ const commands = {
   test,
   help,
   add,
+  show
 };
 
 module.exports = commands;

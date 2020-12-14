@@ -1,15 +1,14 @@
 const Discord = require("discord.js");
 const prefix = require("../../config.json").prefix;
+const mongoose = require("mongoose");
 
-const execute = async function (msg, args, DB) {
-  const t = new Date();
-  t.setUTCMonth(args[2] - 1, args[1]);
-  t.setUTCHours(args[3], args[4], 0, 0);
-  DB.push({
-    task: args[0],
-    time: t,
-  });
-  msg.channel.send(`New task added.\n Current DB: ${JSON.stringify(DB)}`);
+const execute = async function (msg, args, model) {
+  const t_date = new Date();
+  t_date.setUTCMonth(args[2] - 1, args[1]);
+  t_date.setUTCHours(args[3], args[4], 0, 0);
+  const t = new model({ description: args[0], time: t_date });
+  t.save();
+  msg.channel.send(`Successfully added ${args[0]}`);
 };
 
 module.exports = {
