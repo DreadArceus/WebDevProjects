@@ -3,6 +3,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const commands = require("./commands");
 
+var DB = [];
+
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.user.setActivity("~help");
@@ -23,7 +25,7 @@ client.on("message", (msg) => {
 
   const cmd = commands[cmd_name];
 
-  cmd.execute(msg, args);
+  cmd.execute(msg, args, DB);
 });
 
 client.login(config.token);
