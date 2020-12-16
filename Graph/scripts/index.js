@@ -1,4 +1,7 @@
-const array = [10, 11, 1, 5, 20, 15, 13, 9];
+const array = prompt("Enter an array:").split(" ");
+for (var i = 0; i < array.length; i++) {
+  array[i] = parseInt(array[i]);
+}
 var maxNum = 0;
 for (const x of array) {
   if (x > maxNum) {
