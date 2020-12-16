@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+.graph {
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+  height: 500px;
+  width: fit-content;
+  background-color: blue;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.bar-container {
+  height: 98%;
+  width: 30px;
+  float: left;
+  margin: 5px;
+  position: relative;
+}
+.bar {
+  height: 50px;
+  width: inherit;
+  background-color: violet;
+  position: absolute;
+  bottom: 0;
+  border: 2px solid black;
+  border-radius: 8px;
+}
