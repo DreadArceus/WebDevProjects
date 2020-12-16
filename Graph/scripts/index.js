@@ -10,9 +10,10 @@ for (const x of array) {
 }
 
 const body = document.querySelector("body");
-const heading = document.createElement("h1");
+const heading = document.createElement("h2");
 heading.textContent = `${array.join(", ")}`;
-body.append(heading);
+body.insertBefore(heading, body.children[1]);
+body.style.visibility = "visible";
 delete heading;
 delete body;
 
